@@ -3,7 +3,6 @@ package com.example.mobileappdevspringboot.controllers
 import com.example.mobileappdevspringboot.models.CourseDetails
 import com.example.mobileappdevspringboot.models.CourseService
 import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.web.bind.annotation.RequestParam
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
@@ -21,10 +20,4 @@ class CourseDetailsController(private val courseService: CourseService) {
     fun getAllCourse(): List<CourseDetails> {
         return courseService.courseDetailsList()
     }
-
-    @RequestMapping("/filter")  //localhost:8080/courses/filter?filter=0
-    fun getCourses(@RequestParam("filter", required = false) filter: String?): List<CourseDetails> {
-        return courseService.courseDetailsList(filter)
-    }
-
 }
