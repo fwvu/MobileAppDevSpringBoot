@@ -12,6 +12,7 @@ class CourseDetailsController(private val courseService: CourseService) {
     @RequestMapping("") //localhost:8080/courses
     fun sayHello() = "Hello World, this is a root test"
 
+
     @RequestMapping("/test1") //localhost:8080/courses/test1
     fun retCourseDetailsTest() = "This is a test"
 
