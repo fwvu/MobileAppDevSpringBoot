@@ -1,6 +1,5 @@
 package com.example.mobileappdevspringboot.controllers
 
-import com.example.mobileappdevspringboot.models.LoginResponse
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RequestParam
 import org.springframework.web.bind.annotation.RestController
@@ -32,10 +31,10 @@ data class LoginResponse2(
 
 object userRepository2 {
     val users = listOf(
-        User("john", "12345", "s4551234", "john@fakeemail.com", "555-1234"),
-        User("jane", "54321", "s4555678", "jane@fakeemail.com", "555-5678"),
-        User("abc", "abc", "s4559876", "abc@fakeemail.com", "555-9876"),
-        User("123", "123", "s4554321", "123@fakeemail.com", "555-4321")
+        User("john", "12345", "s4551234", "john@fakeemail.com", "0400-111-1234"),
+        User("jane", "54321", "s4555678", "jane@fakeemail.com", "0400-111-5678"),
+        User("abc", "abc", "s4559876", "abc@fakeemail.com", "0400-111-9876"),
+        User("123", "123", "s4554321", "123@fakeemail.com", "0400-111-4321")
     )
 
     fun findUserByUsername(username: String): User? {
